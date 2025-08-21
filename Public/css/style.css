@@ -1,0 +1,344 @@
+html {
+  scroll-padding-top: 100px;
+  /* Adjust to match your navbar height */
+}
+
+.container-fluid {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@media (max-width: 400px) {
+  #home {
+    padding: 50px 10px !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  #banner-btn {
+    margin: 10px auto !important;
+    display: inline-block;
+  }
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  padding-top: 95px;
+  /* Adjust if your navbar is taller */
+}
+.nav-link.active {
+  font-weight: bolder;
+}
+
+.banner {
+  /* REMOVE or do NOT set fixed height or overflow */
+
+  overflow: visible !important;
+  /* background-image: url('../images/banner-g.png'); */
+  padding: 70px 0 16px 0;
+  background-size: cover;
+  color: white !important;
+}
+
+nav a {
+  margin: 0 10px;
+}
+
+/* .navbar {
+    background-color: #F5F5F5 !important;
+
+} */
+.navbar .navbar-brand {
+  color: #031867 !important;
+}
+
+.carousel-text {
+  color: #5b5c62 !important;
+}
+
+.navy {
+  display: flex;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+.lang-btn img {
+  display: block;
+}
+
+/* .custom-navbar {
+    border-bottom: 1.5px solid #031867 !important;
+    border-right: 1.5px solid #031867 !important;
+    
+} */
+
+.custom-footer {
+  color: #031867 !important;
+}
+
+nav {
+  background-color: #fff !important;
+}
+
+.navbar-nav.navy .nav-link {
+  color: #031867 !important;
+}
+
+.navbar-brand.img-fluid {
+  color: #031867 !important;
+}
+
+.lang-btn {
+  padding: 0;
+  width: 50px;
+  height: 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.lang-btn.active {
+  background-color: #c0c5db !important;
+}
+
+.hero {
+  background: url("../images/banner.png");
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.board-member {
+  background-color: #f8f9fa;
+  scroll-snap-align: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  width: 32%;
+  /* Default for desktops/tablets */
+}
+
+@media (max-width: 767.98px) {
+  .board-member {
+    width: 100%;
+  }
+}
+
+.about-heading {
+  color: linear-gradient(to bottom right, #031867, #c0c5db);
+}
+
+.aboutus-title {
+  color: #c0c5db !important;
+}
+
+.font-dark {
+  color: #5b5c62 !important;
+}
+
+.about {
+  background-color: #fff !important;
+}
+
+.footer {
+  background-color: #c0c5db;
+  color: #fff !important;
+}
+
+.nav-toggle-icon {
+  color: #fff !important;
+}
+
+.h-bar {
+  background-color: #031867 !important;
+}
+
+.btn {
+  background: linear-gradient(to bottom right, #031867, #c0c5db);
+  color: #fff !important;
+  border: none;
+}
+
+i {
+  font-size: 25px;
+}
+
+.team-photo {
+  width: 100%;
+  height: 250px;
+  /* fixed height */
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+iframe {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+@media (max-width: 767.98px) {
+  .board-member {
+    flex-shrink: 0;
+
+    /* Padding: 1.5rem (24px) on all sides */
+    padding: 1.5rem;
+
+    /* Background opacity (25%) */
+    background-color: #f8f9fa;
+    /* Or use rgba of your actual bg color */
+
+    /* Rounded corners */
+    border-radius: 1.5rem;
+    /* rounded-4 = 1.5rem */
+
+    /* Box shadow */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+    /* Centered text */
+    text-align: center;
+
+    /* Width: 100% on small screens */
+    width: 100%;
+  }
+}
+
+.h-bar {
+  background-color: #212529;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: -4px;
+  /* tweak for no gap */
+}
+
+.no-padding {
+  padding: 20px 20px !important;
+  /* or whatever you prefer */
+}
+
+.animate__animated.animate__bounceInLeft {
+  --animate-duration: 2s;
+}
+
+.animate__animated.animate__bounceInRight {
+  --animate-duration: 2s;
+}
+
+/* This changes all the animations globally */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+
+.custom-font {
+  font-size: 1.25rem;
+}
+
+.spotlight-gallery {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.gallery-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+
+  /* ✅ Add transition here */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: 1;
+}
+
+/* Reset everything when hovering container */
+.spotlight-gallery:hover .gallery-img {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+/* Fade only the non-hovered images */
+.spotlight-gallery:hover .gallery-img:not(:hover) {
+  opacity: 0.5;
+}
+
+/* Enlarge the hovered image */
+.gallery-img:hover {
+  transform: scale(1.5);
+  opacity: 1;
+  z-index: 10;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Container center */
+.splide {
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/* Slide layout */
+.splide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0.5;
+}
+
+/* Zoom + center active */
+.splide__slide.is-active {
+  transform: scale(1.3);
+  opacity: 1;
+  z-index: 10;
+}
+
+/* Responsive image size */
+.splide__slide img {
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0.5;
+}
+
+.splide__slide.is-active img {
+  transform: scale(1.3);
+  opacity: 1;
+  z-index: 10;
+}
+#backToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  /* 👉 moved to right */
+  z-index: 999;
+  font-size: 16px;
+  background-color: #031867;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  /* wider button */
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+#backToTopBtn:hover {
+  opacity: 1;
+}
