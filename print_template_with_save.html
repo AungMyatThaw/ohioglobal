@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printable Document with Save</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            max-width: 600px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 6px;
+            margin-top: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 8px 15px;
+            border: none;
+            background-color: #0078d7;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        @media print {
+            button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Document Template</h2>
+
+    <form id="printForm">
+        <label>Full Name Member:
+            <input type="text" id="name" placeholder="Enter full name">
+            <input type="text" id="name" placeholder="Enter full name">
+            <input type="text" id="name" placeholder="Enter full name">
+        </label>
+
+        <label>Address:
+            <textarea id="address" rows="3" placeholder="Enter address"></textarea>
+        </label>
+
+        <label>Date:
+            <input type="date" id="date">
+        </label>
+
+        <label>Remarks:
+            <textarea id="remarks" rows="3" placeholder="Additional notes"></textarea>
+        </label>
+
+        <button type="button" onclick="saveData()">💾 Save Data</button>
+        <button type="button" onclick="window.print()">🖨️ Print</button>
+        <button type="button" onclick="clearData()">🗑️ Clear Saved Data</button>
+    </form>
+
+    <script>
+        const inputs = document.querySelectorAll("#printForm input, #printForm textarea");
+
+        // Load saved data on page open
+        inputs.forEach(input => {
+            const saved = localStorage.getItem(input.id);
+            if (saved) input.value = saved;
+        });
+
+        // Save only when clicking “Save Data”
+        function saveData() {
+            inputs.forEach(input => {
+                localStorage.setItem(input.id, input.value);
+            });
+            alert("✅ Data saved successfully!");
+        }
+
+        // Clear all saved inputs
+        function clearData() {
+            if (confirm("Clear all saved form data?")) {
+                inputs.forEach(input => {
+                    localStorage.removeItem(input.id);
+                    input.value = "";
+                });
+            }
+        }
+    </script>
+
+</body>
+
+</html>
